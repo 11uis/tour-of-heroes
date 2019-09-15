@@ -1,8 +1,21 @@
-<h2>{{hero.name | uppercase}} Details</h2>
-<div class="jasmine-warning">
-  <label>
-    Name:
-    <input [(ngModel)]="hero.name" placeholder="name"/>
-  </label>
+<h2 class="jasmine-excluded-no-display">My HEROES</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <span>{{hero.id}}</span>{{hero.name}}
+  </li>
+</ul>
+
+<div >
+  <table>
+    <tr>
+      <th class="rcorners1">ID</th>
+      <th class="rcorners1">NAME</th>
+    </tr>
+    <tr *ngFor="let hero of heroes">
+      <td class="rcorners1">{{hero.id}}</td>
+      <td class="rcorners1">{{hero.name}}</td>
+    </tr>
+  </table>
+
 </div>
 

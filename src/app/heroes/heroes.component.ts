@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+// import the face data
+import { HEROES } from "../mock-heroes";
 
 @Component({
   selector: 'app-heroes',
@@ -7,11 +9,10 @@ import { Hero } from '../hero';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
+  // VARIABLES
+  private heroes = HEROES;
+  private hero: Hero;
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
   constructor() { }
 
   ngOnInit() {
