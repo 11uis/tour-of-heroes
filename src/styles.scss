@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+  color: #380599;
+  font-family: "Times New Roman", Serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #053f51;
+  font-family: "Times New Roman", Serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+
+/* I assume is for the text that one gives in an input an for the buttons of the body of the site */
+body, input[type="text"], button {
+  color: #333;
+  font-family: Cambria, Georgia;
+}
+
+/* For the rest */
+* {
+  font-family: Arial, Helvetiva, sans-serif;
+}
