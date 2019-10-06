@@ -1,21 +1,36 @@
 <h2 class="jasmine-excluded-no-display">My HEROES</h2>
+<!-- We need the ngIf statement below in order for the elements of the list to be shown -->
 <ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <span>{{hero.id}}</span>{{hero.name}}
+  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span>{{hero.name}}
   </li>
 </ul>
 
-<div >
-  <table>
+<!--<div >
+  <table class="heroes">
     <tr>
-      <th class="rcorners1">ID</th>
-      <th class="rcorners1">NAME</th>
+      <th class="rcorners1, badge">ID</th>
+      <th class="rcorners1, badge">NAME</th>
     </tr>
-    <tr *ngFor="let hero of heroes">
-      <td class="rcorners1">{{hero.id}}</td>
-      <td class="rcorners1">{{hero.name}}</td>
+    <tr *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)" >
+      <td class="rcorners1, badge">{{hero.id}}</td>
+      <td class="rcorners1, badge">{{hero.name}}</td>
     </tr>
   </table>
+</div>-->
 
+<!-- Statement to show the selected Hero -->
+<div *ngIf="selectedHero">
+  <h3>{{selectedHero.name | uppercase}} Details</h3>
+  <div class="rcorners2">
+    <div><span style="color:dodgerblue"><b>id: </b></span>{{selectedHero.id}}</div>
+    <div>
+      <label>
+        Name:
+        <input [(ngModel)]="selectedHero.name" placeholder="name" class="rcorners1"/>
+      </label>
+    </div>
+  </div>
 </div>
+
 

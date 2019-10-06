@@ -12,10 +12,15 @@ export class HeroesComponent implements OnInit {
   // VARIABLES
   private heroes = HEROES;
   private hero: Hero;
+  private selectedHero: Hero;
 
   constructor() { }
 
+  /** Method when object hero is selected **/
+  onSelect(hero:Hero): void {
+    this.selectedHero = hero;
+  } // End of onSelect()
+
   ngOnInit() {
   }
-
 }
