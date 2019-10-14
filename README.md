@@ -1,6 +1,7 @@
 # AngularTourOfHeroes
-
+This is not my own project but a learning process following the Tutorial "Tour of heores" from Angular: https://angular.io/tutorial
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+
 
 ## Development server
 
