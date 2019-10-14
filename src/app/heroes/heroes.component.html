@@ -1,10 +1,15 @@
 <h2 class="jasmine-excluded-no-display">My HEROES</h2>
 <!-- We need the ngIf statement below in order for the elements of the list to be shown -->
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
     <span class="badge">{{hero.id}}</span>{{hero.name}}
   </li>
 </ul>
+
+<!-- One-way Binding to the hero-detail component -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
 <!--<div >
   <table class="heroes">
@@ -20,7 +25,7 @@
 </div>-->
 
 <!-- Statement to show the selected Hero -->
-<div *ngIf="selectedHero">
+<!--<div *ngIf="selectedHero">
   <h3>{{selectedHero.name | uppercase}} Details</h3>
   <div class="rcorners2">
     <div><span style="color:dodgerblue"><b>id: </b></span>{{selectedHero.id}}</div>
@@ -31,6 +36,6 @@
       </label>
     </div>
   </div>
-</div>
+</div>-->
 
 
